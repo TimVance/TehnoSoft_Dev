@@ -26,7 +26,7 @@
     </div>
     <div class="container" style="padding: 0;">
         <nav class="navbar navbar-expand-lg navbar-light bottom-nav" style="padding: 0;">
-            <a class="navbar-brand" href="index.html"><img src="img/header/logo.png" alt="">
+            <a class="navbar-brand" href="index.html"><img src="<?=SITE_TEMPLATE_PATH;?>/assets/img/header/logo.png" alt="">
                 ТехноСофт
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -35,6 +35,22 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:menu",
+                    "",
+                    Array(
+                        "ALLOW_MULTI_SELECT" => "N",
+                        "CHILD_MENU_TYPE" => "left",
+                        "DELAY" => "N",
+                        "MAX_LEVEL" => "2",
+                        "MENU_CACHE_GET_VARS" => array(""),
+                        "MENU_CACHE_TIME" => "3600",
+                        "MENU_CACHE_TYPE" => "A",
+                        "MENU_CACHE_USE_GROUPS" => "Y",
+                        "ROOT_MENU_TYPE" => "top",
+                        "USE_EXT" => "Y"
+                    )
+                );?>
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="catalog.html" id="navbarDropdown" role="button"
@@ -66,9 +82,9 @@
                     </li>
                 </ul>
                 <span class="navbar-text">
-            <a href="#"><img src="img/header/Профиль.png" alt=""></a>
-            <a href="#"><img src="img/header/Корзина.png" alt=""></a>
-            <a href="#"><img src="img/header/Сравнить.png" alt=""></a>
+            <a href="#"><img src="<?=SITE_TEMPLATE_PATH;?>/assets/img/header/profile.png" alt=""></a>
+            <a href="#"><img src="<?=SITE_TEMPLATE_PATH;?>/assets/img/header/cart.png" alt=""></a>
+            <a href="#"><img src="<?=SITE_TEMPLATE_PATH;?>/assets/img/header/compare.png" alt=""></a>
           </span>
             </div>
         </nav>

@@ -20,13 +20,13 @@
                 <h4>Наши партнеры</h4>
                 <div class="row">
                     <div class="col-4">
-                        <img src="img/partners/1.png" alt="">
+                        <img <?=SITE_TEMPLATE_PATH;?>/assets/img/partners/1.png" alt="">
                     </div>
                     <div class="col-4">
-                        <img src="img/partners/2.png" alt="">
+                        <img <?=SITE_TEMPLATE_PATH;?>/assets/img/partners/2.png" alt="">
                     </div>
                     <div class="col-4">
-                        <img src="img/partners/3.png" alt="">
+                        <img <?=SITE_TEMPLATE_PATH;?>/assets/img/partners/3.png" alt="">
                     </div>
                 </div>
             </div>
