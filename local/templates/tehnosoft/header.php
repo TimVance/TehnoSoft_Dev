@@ -18,6 +18,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <?
+    CJSCore::Init(array("jquery"));
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/jquery.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/popper.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/bootstrap.min.js');
