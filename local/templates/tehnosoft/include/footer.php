@@ -4,17 +4,39 @@
     <div class="container forms">
         <div class="row">
             <div class="col-lg-6 col-md-12 subscribe">
-                <h4>Подпишитесь на наши новости</h4>
-                <form class="form">
-                    <div class="form-row">
-                        <div class="col-md-9 col-sm-12">
-                            <input type="text" class="form-control" placeholder="Ваш e-mail">
-                        </div>
-                        <div class="col-md-3 col-sm-3">
-                            <button type="button">Подписаться</button>
-                        </div>
-                    </div>
-                </form>
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:main.include",
+                    "",
+                    Array(
+                        "AREA_FILE_SHOW" => "file",
+                        "AREA_FILE_SUFFIX" => "inc",
+                        "EDIT_TEMPLATE" => "",
+                        "PATH" => SITE_TEMPLATE_PATH."/include/parts/subscribe_title.php"
+                    )
+                );?>
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:sender.subscribe",
+                    "subscribe",
+                    Array(
+                        "AJAX_MODE" => "Y",
+                        "AJAX_OPTION_ADDITIONAL" => "",
+                        "AJAX_OPTION_HISTORY" => "N",
+                        "AJAX_OPTION_JUMP" => "N",
+                        "AJAX_OPTION_STYLE" => "N",
+                        "CACHE_TIME" => "3600",
+                        "CACHE_TYPE" => "A",
+                        "COMPONENT_TEMPLATE" => ".default",
+                        "CONFIRMATION" => "N",
+                        "HIDE_MAILINGS" => "N",
+                        "SET_TITLE" => "N",
+                        "SHOW_HIDDEN" => "N",
+                        "USER_CONSENT" => "N",
+                        "USER_CONSENT_ID" => "0",
+                        "USER_CONSENT_IS_CHECKED" => "N",
+                        "USER_CONSENT_IS_LOADED" => "N",
+                        "USE_PERSONALIZATION" => "N"
+                    )
+                );?>
             </div>
             <div class="col-lg-6 col-md-12 our-partners ">
                 <?$APPLICATION->IncludeComponent(
