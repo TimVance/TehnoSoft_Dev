@@ -50,7 +50,16 @@
     <div class="container" style="padding: 0;">
         <nav class="navbar navbar-expand-lg navbar-light bottom-nav" style="padding: 0;">
             <a class="navbar-brand" href="/">
-                <img src="<?= SITE_TEMPLATE_PATH; ?>/assets/img/header/logo.png" alt=""> ТехноСофт
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:main.include",
+                    "",
+                    Array(
+                        "AREA_FILE_SHOW" => "file",
+                        "AREA_FILE_SUFFIX" => "inc",
+                        "EDIT_TEMPLATE" => "",
+                        "PATH" => SITE_TEMPLATE_PATH."/include/parts/logo.php"
+                    )
+                );?>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
