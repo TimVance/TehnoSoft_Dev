@@ -33,26 +33,35 @@
         </div>
     </div>
     <div class="container-fluid footer">
-        <div class="row align-items-end" style="height: 90px;">
-            <div class="col"></div>
-            <div class="col-auto">
-                <a href="#">Контакты</a>
-            </div>
-            <div class="col-auto">
-                <a href="#">Карта сайта</a>
-            </div>
-            <div class="col-auto">
-                <a href="#">Поиск</a>
-            </div>
-            <div class="col-auto">
-                <a href="#">Помощь</a>
-            </div>
-            <div class="col"></div>
-        </div>
+        <? $APPLICATION->IncludeComponent(
+            "bitrix:menu",
+            "footer",
+            array(
+                "ALLOW_MULTI_SELECT"    => "N",
+                "CHILD_MENU_TYPE"       => "left",
+                "DELAY"                 => "N",
+                "MAX_LEVEL"             => "2",
+                "MENU_CACHE_GET_VARS"   => array(""),
+                "MENU_CACHE_TIME"       => "3600",
+                "MENU_CACHE_TYPE"       => "A",
+                "MENU_CACHE_USE_GROUPS" => "Y",
+                "ROOT_MENU_TYPE"        => "footer",
+                "USE_EXT"               => "Y"
+            )
+        ); ?>
         <hr color="white">
         <div class="row">
             <div class="col-12 justify-content-center">
-                <p class="text-center">© Внедренческий центр "ТехноСофт", 2019</p>
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:main.include",
+                    "",
+                    Array(
+                        "AREA_FILE_SHOW" => "file",
+                        "AREA_FILE_SUFFIX" => "inc",
+                        "EDIT_TEMPLATE" => "",
+                        "PATH" => SITE_TEMPLATE_PATH."/include/parts/copyright.php"
+                    )
+                );?>
             </div>
         </div>
     </div>

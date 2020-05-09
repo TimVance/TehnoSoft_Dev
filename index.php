@@ -7,8 +7,16 @@ $APPLICATION->SetTitle('Главная');
     <div class="container">
         <div class="row align-items-center" style="height:100%">
             <div class="col-lg-8 col-md-12">
-                <h1>Технософт</h1>
-                <p>Ваше <strong>конкурентное</strong> преимущество</p>
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:main.include",
+                    "",
+                    Array(
+                        "AREA_FILE_SHOW" => "file",
+                        "AREA_FILE_SUFFIX" => "inc",
+                        "EDIT_TEMPLATE" => "",
+                        "PATH" => SITE_TEMPLATE_PATH."/include/parts/maincaption.php"
+                    )
+                );?>
             </div>
             <div class="col-lg-4 col-md-12">
                 <?$APPLICATION->IncludeComponent(
