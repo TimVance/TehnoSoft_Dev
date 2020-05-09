@@ -23,6 +23,8 @@
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/popper.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/bootstrap.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/owl.carousel.min.js');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/owl.carousel.min.js');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/jquery.fancybox.min.js');
     ?>
     <?
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH .'/assets/css/bootstrap.min.css');
@@ -30,6 +32,7 @@
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH .'/assets/css/style.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH .'/assets/css/owl.carousel.min.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH .'/assets/css/owl.theme.default.min.css');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH .'/assets/css/jquery.fancybox.min.css');
     ?>
 
 </head>

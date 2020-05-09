@@ -1,0 +1,1 @@
+<p class="text-center">Работает на <strong>«1С-Битрикс: Управление сайтом»</strong></p>

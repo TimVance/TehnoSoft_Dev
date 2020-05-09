@@ -130,6 +130,18 @@
                     )
                 );?>
             </div>
+            <div class="col-12 justify-content-center">
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:main.include",
+                    "",
+                    Array(
+                        "AREA_FILE_SHOW" => "file",
+                        "AREA_FILE_SUFFIX" => "inc",
+                        "EDIT_TEMPLATE" => "",
+                        "PATH" => SITE_TEMPLATE_PATH."/include/parts/powered.php"
+                    )
+                );?>
+            </div>
         </div>
     </div>
 </footer>
