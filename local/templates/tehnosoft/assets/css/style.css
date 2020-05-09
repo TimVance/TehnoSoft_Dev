@@ -132,9 +132,8 @@ h4 {
   font-style: italic;
 }
 
-.form button {
+.form .btn {
   color: #FFFFFF;
-  font-size: 18;
   font-weight: bold;
   text-transform: uppercase;
   background-color: #334A6F;

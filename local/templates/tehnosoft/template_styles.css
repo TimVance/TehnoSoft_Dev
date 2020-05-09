@@ -1,0 +1,15 @@
+.afbf_name {
+    display: none;
+}
+.alx_feed_back {
+    border: 3px solid rgba(112, 112, 112, 0.1);
+    padding: 40px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1)
+}
+.title-form {
+    color: #334A6F;
+    font-size: 20px;
+}
+.alx_feed_back {
+    margin-right: 50px;
+}

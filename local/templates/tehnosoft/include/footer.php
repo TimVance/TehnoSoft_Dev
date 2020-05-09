@@ -54,9 +54,6 @@
             <div class="col-12 justify-content-center">
                 <p class="text-center">© Внедренческий центр "ТехноСофт", 2019</p>
             </div>
-            <div class="col-12 justify-content-center">
-                <p class="text-center">Работает на <strong>«1С-Битрикс: Управление сайтом»</strong></p>
-            </div>
         </div>
     </div>
 </footer>
