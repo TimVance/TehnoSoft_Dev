@@ -5,7 +5,7 @@ $APPLICATION->SetTitle("Каталог");?>
 
 <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog", 
-	".default", 
+	"catalog",
 	array(
 		"ACTION_VARIABLE" => "action",
 		"ADD_ELEMENT_CHAIN" => "N",
