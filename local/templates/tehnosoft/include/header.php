@@ -92,3 +92,19 @@
         </nav>
     </div>
 </header>
+
+<? if(!$isMainPage): ?>
+
+    <?$APPLICATION->IncludeComponent(
+        "bitrix:breadcrumb",
+        "main",
+        Array(
+            "PATH" => "",
+            "SITE_ID" => "s1",
+            "START_FROM" => "0"
+        )
+    );?>
+
+    <div class="container content-page">
+
+<? endif; ?>

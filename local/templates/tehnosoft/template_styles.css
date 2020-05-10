@@ -13,3 +13,28 @@
 .alx_feed_back {
     margin-right: 50px;
 }
+
+.bx-breadcrumb-item {
+    display: inline-block;
+    font-size: 14px;
+}
+
+.bx-breadcrumb-item a {
+    padding: 0;
+}
+
+.bx-breadcrumb-item > span {
+    color: #f3b337;
+}
+
+.bx-breadcrumb-item a:hover {
+    text-decoration: underline;
+}
+
+.bx-breadcrumb-item i {
+    margin: 0 5px;
+}
+
+.content-page {
+    padding: 20px 0;
+}
