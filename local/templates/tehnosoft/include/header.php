@@ -89,8 +89,8 @@
                     <a href="#"><img src="<?= SITE_TEMPLATE_PATH; ?>/assets/img/header/compare.png" alt=""></a>
                     <?$APPLICATION->IncludeComponent(
                         "bitrix:sale.basket.basket.line",
-                        "",
-                        Array(
+                        ".default",
+                        array(
                             "HIDE_ON_BASKET_PAGES" => "Y",
                             "PATH_TO_AUTHORIZE" => "",
                             "PATH_TO_BASKET" => SITE_DIR."personal/cart/",
@@ -102,11 +102,13 @@
                             "SHOW_AUTHOR" => "N",
                             "SHOW_EMPTY_VALUES" => "Y",
                             "SHOW_NUM_PRODUCTS" => "Y",
-                            "SHOW_PERSONAL_LINK" => "Y",
+                            "SHOW_PERSONAL_LINK" => "N",
                             "SHOW_PRODUCTS" => "N",
-                            "SHOW_REGISTRATION" => "Y",
-                            "SHOW_TOTAL_PRICE" => "Y"
-                        )
+                            "SHOW_REGISTRATION" => "N",
+                            "SHOW_TOTAL_PRICE" => "Y",
+                            "COMPONENT_TEMPLATE" => ".default"
+                        ),
+                        false
                     );?>
                 </span>
             </div>
