@@ -2,7 +2,6 @@
 $this->setFrameMode(true);
 ?>
 
-
 <h4><?=$arResult["NAME"]?></h4>
 <div class="col-lg-12 col-md-12">
     <div class="row">
