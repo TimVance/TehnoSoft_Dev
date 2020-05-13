@@ -25,6 +25,7 @@
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/owl.carousel.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/owl.carousel.min.js');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/jquery.fancybox.min.js');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/main.js');
     ?>
     <?
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH .'/assets/css/bootstrap.min.css');
