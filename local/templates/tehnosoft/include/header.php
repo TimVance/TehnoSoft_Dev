@@ -66,7 +66,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse flexBetween" id="navbarSupportedContent">
                 <? $APPLICATION->IncludeComponent(
                     "bitrix:menu",
                     "main",
@@ -83,13 +83,10 @@
                         "USE_EXT"               => "Y"
                     )
                 ); ?>
-                <span class="navbar-text">
-                    <a href="#"><img src="<?= SITE_TEMPLATE_PATH; ?>/assets/img/header/profile.png" alt=""></a>
-                    <a href="#"><img src="<?= SITE_TEMPLATE_PATH; ?>/assets/img/header/cart.png" alt=""></a>
-                    <a href="#"><img src="<?= SITE_TEMPLATE_PATH; ?>/assets/img/header/compare.png" alt=""></a>
+                <div class="navbar-text">
                     <?$APPLICATION->IncludeComponent(
                         "bitrix:sale.basket.basket.line",
-                        ".default",
+                        "cart",
                         array(
                             "HIDE_ON_BASKET_PAGES" => "Y",
                             "PATH_TO_AUTHORIZE" => "",
@@ -100,7 +97,7 @@
                             "PATH_TO_REGISTER" => SITE_DIR."login/",
                             "POSITION_FIXED" => "N",
                             "SHOW_AUTHOR" => "N",
-                            "SHOW_EMPTY_VALUES" => "Y",
+                            "SHOW_EMPTY_VALUES" => "N",
                             "SHOW_NUM_PRODUCTS" => "Y",
                             "SHOW_PERSONAL_LINK" => "N",
                             "SHOW_PRODUCTS" => "N",
@@ -110,7 +107,7 @@
                         ),
                         false
                     );?>
-                </span>
+                </div>
             </div>
         </nav>
     </div>

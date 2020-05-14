@@ -92,3 +92,59 @@
     max-width: 100%;
     height: auto;
 }
+
+.flexBetween {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bx-basket-block {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.bx-basket-block img {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.bx-basket-block .count-cart {
+    position: absolute;
+    display: flex;
+    height: 16px;
+    min-width: 16px;
+    text-align: center;
+    line-height: 16px;
+    font-size: 12px;
+    left: 0;
+    top: 5px;
+    background-color: #f3b337;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.bx-basket-block .count-cart span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+}
+
+.bx-basket-block .summ-cart {
+    font-size: 15px;
+}
+
+.bx-basket-block .empty-cart {
+    font-size: 14px;
+    color: #c4c4c4;
+}
