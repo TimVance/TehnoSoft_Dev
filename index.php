@@ -3,7 +3,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
 $APPLICATION->SetTitle('Главная');
 ?>
 
-<div class="jumbotron jumdo-head">
+<div class="jumbotron jumdo-head main-slider">
     <div class="container">
         <div class="row align-items-center" style="height:100%">
             <div class="col-lg-8 col-md-12">

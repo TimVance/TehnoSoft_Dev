@@ -5,7 +5,7 @@ use \Bitrix\Main\Localization\Loc;
 $this->setFrameMode(true);
 ?>
 
-<div class="jumbotron bg-secondary" style="margin-top: 120px">
+<div class="jumbotron main-catalog-bg">
     <div class="container">
         <h2>Популярные товары</h2>
         <div class="row">
@@ -28,7 +28,9 @@ $this->setFrameMode(true);
                         <? if (!empty($item["PRICES"]["BASE"]["PRINT_VALUE"])): ?>
                             <div class="price"><?=$item["PRICES"]["BASE"]["PRINT_VALUE"]?></div>
                         <? endif; ?>
-                        <a href="<? echo $item["ADD_URL"] ?>" rel="nofollow">В корзину</a>
+                        <a class="button-add" href="<? echo $item["ADD_URL"] ?>" rel="nofollow">
+                            <i class="fas fa-shopping-cart"></i> <span>В корзину</span>
+                        </a>
                     </div>
                 </div>
             </div>

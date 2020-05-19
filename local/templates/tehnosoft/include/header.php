@@ -127,4 +127,6 @@
 
     <div class="container content-page">
 
+        <h1 class="page"><?$APPLICATION->ShowTitle(false);?></h1>
+
 <? endif; ?>

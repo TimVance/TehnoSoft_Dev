@@ -17,12 +17,13 @@ $(document).ready(function () {
 
     $('a[rel*="ADD2BASKET"]').click(function () {
         let el = $(this);
+        el.find('span').html('<span class="lds-ellipsis"><span></span><span></span><span></span><span></span></span>');
         $.ajax({
             type: "GET",
             url: $(this).attr("rel"),
             dataType: "html",
             success: function (out) {
-                el.text("Добавить еще");
+                el.find('span').text("Добавить еще");
                 BX.onCustomEvent('OnBasketChange');
             }
         });

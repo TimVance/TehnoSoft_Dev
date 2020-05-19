@@ -25,7 +25,9 @@ $this->setFrameMode(true);
                 <? if (!empty($item["PRICES"]["BASE"]["PRINT_VALUE"])): ?>
                     <div class="price"><?=$item["PRICES"]["BASE"]["PRINT_VALUE"]?></div>
                 <? endif; ?>
-                <a href="<? echo $item["ADD_URL"] ?>" rel="nofollow">В корзину</a>
+                <a class="button-add" href="<? echo $item["ADD_URL"] ?>" rel="nofollow">
+                    <i class="fas fa-shopping-cart"></i> <span>В корзину</span>
+                </a>
             </div>
         </div>
     </div>

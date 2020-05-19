@@ -12,11 +12,12 @@ $this->setFrameMode(true);
             $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
             ?>
             <div class="col-lg-3 col-md-6 col-sm-12 border company" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-                <div class="row align-items-center" style="height: 80%">
+                <div class="row align-items-center">
                     <div class="col-12 justify-content-center">
                         <?
                             if(!empty($arItem["DISPLAY_PROPERTIES"]["link"]["VALUE"]))
-                                echo '<a href="'.$arItem["DISPLAY_PROPERTIES"]["link"]["VALUE"].'">';
+                                echo '<a class="section-img-wrapper" href="'.$arItem["DISPLAY_PROPERTIES"]["link"]["VALUE"].'">';
+                                else echo '<div class="section-img-wrapper">';
                         ?>
                         <img
                             class="preview_picture"
@@ -30,10 +31,11 @@ $this->setFrameMode(true);
                         <?
                             if(!empty($arItem["DISPLAY_PROPERTIES"]["link"]["VALUE"]))
                                 echo '</a>';
+                                else echo '</div>';
                         ?>
                     </div>
                 </div>
-                <div class="row align-items-bottom" style="height: 20%">
+                <div class="row align-items-bottom">
                     <?
                     if(!empty($arItem["DISPLAY_PROPERTIES"]["link"]["VALUE"]))
                         echo '<a href="'.$arItem["DISPLAY_PROPERTIES"]["link"]["VALUE"].'">';
