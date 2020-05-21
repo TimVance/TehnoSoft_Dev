@@ -126,7 +126,8 @@
     );?>
 
     <div class="container content-page">
-
-        <h1 class="page"><?$APPLICATION->ShowTitle(false);?></h1>
+        <?if(!CSite::InDir('/catalog/')):?>
+            <h1 class="page"><?$APPLICATION->ShowTitle(false);?></h1>
+        <? endif; ?>
 
 <? endif; ?>

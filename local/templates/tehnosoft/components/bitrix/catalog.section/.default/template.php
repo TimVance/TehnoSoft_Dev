@@ -5,6 +5,7 @@ use \Bitrix\Main\Localization\Loc;
 $this->setFrameMode(true);
 ?>
 
+
 <div class="row">
 <? foreach ($arResult["ITEMS"] as $item): ?>
     <div class="col-lg-6 col-md-12 product">
@@ -38,7 +39,3 @@ $this->setFrameMode(true);
 <div data-pagination-num="<?=$navParams['NavNum']?>">
     <?=$arResult['NAV_STRING']?>
 </div>
-
-<pre style="display: none">
-<?php print_r($arResult["ITEMS"]); ?>
-</pre>

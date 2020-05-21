@@ -17,6 +17,7 @@ $strReturn = '';
 $css = $APPLICATION->GetCSSArray();
 
 $strReturn .= '<div class="container path">';
+$strReturn .= '<div class="row">';
 
 $strReturn .= '<div class="bx-breadcrumb" itemprop="http://schema.org/breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">';
 
@@ -48,6 +49,7 @@ for($index = 0; $index < $itemSize; $index++)
 }
 
 $strReturn .= '<div style="clear:both"></div></div>';
+$strReturn .= '</div>';
 $strReturn .= '</div>';
 
 return $strReturn;

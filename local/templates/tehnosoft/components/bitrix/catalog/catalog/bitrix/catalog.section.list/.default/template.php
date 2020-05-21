@@ -8,23 +8,31 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 
 ?>
 
-<div class="row">
-    <? foreach ($arResult["SECTIONS"] as $section): ?>
+<? if(!empty($arResult["SECTIONS"])): ?>
+    <div class="container section-list">
+        <div class="row">
+            <? foreach ($arResult["SECTIONS"] as $section): ?>
 
-        <?
-        $this->AddEditAction($section['ID'], $section['EDIT_LINK'], $strSectionEdit);
-        $this->AddDeleteAction($section['ID'], $section['DELETE_LINK'], $strSectionDelete, $arSectionDeleteParams);
-        ?>
+                <?
+                $this->AddEditAction($section['ID'], $section['EDIT_LINK'], $strSectionEdit);
+                $this->AddDeleteAction($section['ID'], $section['DELETE_LINK'], $strSectionDelete, $arSectionDeleteParams);
+                ?>
 
-        <div class="col-lg-3 col-md-4 col-sm-6 border section-list" id="<? echo $this->GetEditAreaId($section['ID']); ?>">
-            <? if(!empty($section["PICTURE"]["SRC"])): ?>
-                <a class="section-img-wrapper" href="<?=$section["SECTION_PAGE_URL"]?>">
-                    <img src="<?=$section["PICTURE"]["SRC"]?>" alt="<?=$section["NAME"]?>" />
-                </a>
-            <? endif; ?>
-            <a class="section-name" href="<?=$section["SECTION_PAGE_URL"]?>">
-                <?=$section["NAME"]?> (<?=$section["ELEMENT_CNT"]?>)
-            </a>
+                <div class="col-lg-3 col-md-4 col-sm-6 border section-list" id="<? echo $this->GetEditAreaId($section['ID']); ?>">
+                    <? if(!empty($section["PICTURE"]["SRC"])): ?>
+                        <a class="section-img-wrapper" href="<?=$section["SECTION_PAGE_URL"]?>">
+                            <img src="<?=$section["PICTURE"]["SRC"]?>" alt="<?=$section["NAME"]?>" />
+                        </a>
+                    <? else: ?>
+                        <a class="section-img-wrapper" href="<?=$section["SECTION_PAGE_URL"]?>">
+                            <img src="<?=SITE_TEMPLATE_PATH?>/assets/img/no-photo.png" alt="<?=$section["NAME"]?>" />
+                        </a>
+                    <? endif; ?>
+                    <a class="section-name" href="<?=$section["SECTION_PAGE_URL"]?>">
+                        <?=$section["NAME"]?> (<?=$section["ELEMENT_CNT"]?>)
+                    </a>
+                </div>
+            <? endforeach; ?>
         </div>
-    <? endforeach; ?>
-</div>
+    </div>
+<? endif; ?>
