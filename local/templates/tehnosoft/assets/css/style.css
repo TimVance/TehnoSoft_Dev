@@ -5,12 +5,15 @@ body {
     color: #1D1D1D;
 }
 
+a {
+    color: #e99302;
+}
+
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     color: #E99400;
     font-size: 40px;
-    text-transform: uppercase;
 }
 
 .main-slider h1 {
@@ -396,7 +399,7 @@ a:hover {
     text-decoration: line-through;
 }
 
-.product .button-add {
+.button-add {
     border: solid 2px #334A6F;
     background-color: #FFFFFF;
     font-family: 'Open Sans', sans-serif;
@@ -416,17 +419,18 @@ a:hover {
     transition: all .3s;
 }
 
-.product i {
+.button-add i {
     display: inline-block;
     margin-right: 5px;
 }
 
-.product .button-add:hover  {
+.button-add:hover  {
     background-color: #334A6F;
     color: #fff;
+    text-decoration: none;
 }
 
-.product .button-add:hover .lds-ellipsis span {
+.button-add:hover .lds-ellipsis span {
     background-color: #fff;
 }
 

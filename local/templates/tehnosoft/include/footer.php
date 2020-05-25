@@ -151,3 +151,4 @@
         </div>
     </div>
 </footer>
+<div id="js-notice-cart"></div>

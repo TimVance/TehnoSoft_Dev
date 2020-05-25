@@ -13,11 +13,13 @@ $this->setFrameMode(true);
             <div class="col-lg-6 col-md-12 product">
                 <div class="row">
                     <div class="col-5">
-                        <? if(!empty($item["PREVIEW_PICTURE"]["SRC"])): ?>
-                            <img src="<?=$item["PREVIEW_PICTURE"]["SRC"]?>" alt="<?= $item["NAME"]; ?>">
-                        <? else: ?>
-                            <img src="<?=SITE_TEMPLATE_PATH?>/assets/img/no-photo.png" alt="<?= $item["NAME"]; ?>">
-                        <? endif; ?>
+                        <a class="section-img-wrapper" href="<?=$item["DETAIL_PAGE_URL"]?>">
+                            <? if(!empty($item["PREVIEW_PICTURE"]["SRC"])): ?>
+                                <img src="<?=$item["PREVIEW_PICTURE"]["SRC"]?>" alt="<?= $item["NAME"]; ?>">
+                            <? else: ?>
+                                <img src="<?=SITE_TEMPLATE_PATH?>/assets/img/no-photo.png" alt="<?= $item["NAME"]; ?>">
+                            <? endif; ?>
+                        </a>
                     </div>
                     <div class="col-7">
                         <h5>
@@ -28,7 +30,7 @@ $this->setFrameMode(true);
                         <? if (!empty($item["PRICES"]["BASE"]["PRINT_VALUE"])): ?>
                             <div class="price"><?=$item["PRICES"]["BASE"]["PRINT_VALUE"]?></div>
                         <? endif; ?>
-                        <a class="button-add" href="<? echo $item["ADD_URL"] ?>" rel="nofollow">
+                        <a data-name="<?= $item["NAME"]; ?>" class="button-add" href="<? echo $item["ADD_URL"] ?>" rel="nofollow">
                             <i class="fas fa-shopping-cart"></i> <span>В корзину</span>
                         </a>
                     </div>

@@ -25,8 +25,19 @@ $(document).ready(function () {
             success: function (out) {
                 el.find('span').text("Добавить еще");
                 BX.onCustomEvent('OnBasketChange');
+                let span = document.createElement('span');
+                span.innerText = 'Товар успешно добавлен в корзину!';
+                $("#js-notice-cart").prepend(span);
+                span.classList.add('show');
+                setTimeout(function () {
+                    span.classList.remove('show');
+                    span.remove();
+                }, 3000);
             }
         });
     });
-
+    $(document).on('click', "#js-notice-cart span", function () {
+        $(this).removeClass('show');
+        $(this).remove();
+    });
 });
