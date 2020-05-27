@@ -330,3 +330,19 @@
     font-size: 13px;
     color: #777;
 }
+
+.navigation-pages a, .navigation-pages .nav-current-page {
+    font-size: 16px;
+    display: inline-block;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+.navigation-pages a:hover {
+    background-color: #f3b337;
+    color: #fff;
+}
+
+.navigation-pages .nav-current-page {
+    background-color: #ccc;
+}
