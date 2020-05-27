@@ -118,7 +118,7 @@ $APPLICATION->SetTitle("Каталог");?>
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_TEMPLATE" => "arrows",
 		"PAGER_TITLE" => "Товары",
-		"PAGE_ELEMENT_COUNT" => "3",
+		"PAGE_ELEMENT_COUNT" => "15",
 		"PARTIAL_PRODUCT_PROPERTIES" => "N",
 		"PRICE_CODE" => array("BASE"),
 		"PRICE_VAT_INCLUDE" => "Y",
