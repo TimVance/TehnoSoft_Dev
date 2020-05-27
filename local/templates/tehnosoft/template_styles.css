@@ -346,3 +346,7 @@
 .navigation-pages .nav-current-page {
     background-color: #ccc;
 }
+
+.detail-description {
+    margin-top: 40px;
+}

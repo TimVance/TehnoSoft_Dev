@@ -31,5 +31,11 @@ $this->setFrameMode(true);?>
                 </div>
             </div>
         </div>
+        <? if(!empty($arResult["DETAIL_TEXT"])): ?>
+            <div class="col-md-12 detail-description">
+                <h3>Описание</h3>
+                <?=$arResult["DETAIL_TEXT"]?>
+            </div>
+        <? endif; ?>
     </div>
 </div>
