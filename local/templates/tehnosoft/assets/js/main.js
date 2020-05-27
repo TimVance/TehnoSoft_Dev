@@ -40,4 +40,7 @@ $(document).ready(function () {
         $(this).removeClass('show');
         $(this).remove();
     });
+    $(".js-open-news").click(function () {
+        $(this).parent().children(".js-open-content").slideToggle();
+    });
 });
