@@ -2,7 +2,7 @@
 
 <header class="header">
     <div class="container-fluid top-menu">
-        <div class="container">
+        <div class="container fixed-mobile-header">
             <div class="row">
                 <div class="col-auto d-none d-sm-block" style="margin-right: 0; padding: 0">
                     <?$APPLICATION->IncludeComponent(
@@ -29,7 +29,7 @@
                     );?>
                 </div>
                 <div class="col d-none d-sm-block"></div>
-                <div class="col-auto">
+                <div class="col-auto mobile-header">
                     <div class="top-right-items" style="margin-top: 14.5px;">
                         <span><i class="fas fa-phone-alt"></i></span>
                         <?$APPLICATION->IncludeComponent(
@@ -43,11 +43,36 @@
                             )
                         );?>
                     </div>
+                    <div class="navbar-text cart-wrapper-mobile">
+                        <?$APPLICATION->IncludeComponent(
+                            "bitrix:sale.basket.basket.line",
+                            "cart",
+                            array(
+                                "HIDE_ON_BASKET_PAGES" => "Y",
+                                "PATH_TO_AUTHORIZE" => "",
+                                "PATH_TO_BASKET" => SITE_DIR."personal/cart/",
+                                "PATH_TO_ORDER" => SITE_DIR."personal/order/make/",
+                                "PATH_TO_PERSONAL" => SITE_DIR."personal/",
+                                "PATH_TO_PROFILE" => SITE_DIR."personal/",
+                                "PATH_TO_REGISTER" => SITE_DIR."login/",
+                                "POSITION_FIXED" => "N",
+                                "SHOW_AUTHOR" => "N",
+                                "SHOW_EMPTY_VALUES" => "N",
+                                "SHOW_NUM_PRODUCTS" => "Y",
+                                "SHOW_PERSONAL_LINK" => "N",
+                                "SHOW_PRODUCTS" => "N",
+                                "SHOW_REGISTRATION" => "N",
+                                "SHOW_TOTAL_PRICE" => "Y",
+                                "COMPONENT_TEMPLATE" => ".default"
+                            ),
+                            false
+                        );?>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container" style="padding: 0;">
+    <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bottom-nav" style="padding: 0;">
             <a class="navbar-brand" href="/">
                 <?$APPLICATION->IncludeComponent(
@@ -83,7 +108,7 @@
                         "USE_EXT"               => "Y"
                     )
                 ); ?>
-                <div class="navbar-text">
+                <div class="navbar-text cart-wrapper">
                     <?$APPLICATION->IncludeComponent(
                         "bitrix:sale.basket.basket.line",
                         "cart",

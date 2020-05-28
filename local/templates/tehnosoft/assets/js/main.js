@@ -43,4 +43,22 @@ $(document).ready(function () {
     $(".js-open-news").click(function () {
         $(this).parent().children(".js-open-content").slideToggle();
     });
+    $('.docs').owlCarousel({
+        responsive: {
+            // breakpoint from 0 up
+            0: {
+                items: 1
+            },
+            480: {
+                items: 2
+            },
+            // breakpoint from 768 up
+            768: {
+                items: 3
+            },
+            980: {
+                items: 4
+            }
+        }
+    });
 });

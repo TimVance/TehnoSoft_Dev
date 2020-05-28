@@ -6,7 +6,7 @@
 
 <? endif; ?>
 
-<footer style="margin-top:120px">
+<footer>
     <div class="container forms">
         <div class="row">
             <div class="col-lg-6 col-md-12 subscribe">

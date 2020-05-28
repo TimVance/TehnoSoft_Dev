@@ -4,7 +4,7 @@ $this->setFrameMode(true);
 
 
 <div class="container">
-    <h2 style="margin: 107px 0 106px 0"><?=$arResult["NAME"]?></h2>
+    <h2><?=$arResult["NAME"]?></h2>
     <div class="row">
         <?foreach($arResult["ITEMS"] as $arItem):?>
             <?

@@ -102,7 +102,7 @@ $frame = $this->createFrame("sender-subscribe", false)->begin();
 		<?=bitrix_sessid_post()?>
 		<input type="hidden" name="sender_subscription" value="add">
         <div class="form-row">
-            <div class="bx-input-group col-md-8 col-sm-12">
+            <div class="bx-input-group col-md-7 col-sm-12">
                 <input class="form-control bx-form_control" type="email" name="SENDER_SUBSCRIBE_EMAIL" value="<?=$arResult["EMAIL"]?>" title="<?=GetMessage("subscr_form_email_title")?>" placeholder="<?=htmlspecialcharsbx(GetMessage('subscr_form_email_title'))?>">
             </div>
 
@@ -139,7 +139,7 @@ $frame = $this->createFrame("sender-subscribe", false)->begin();
             </div>
             <?endif;?>
 
-            <div class="bx_subscribe_submit_container col-md-4 col-sm-3">
+            <div class="bx_subscribe_submit_container col-md-5 col-sm-6">
                 <button class="sender-btn btn-subscribe" id="bx_subscribe_btn_<?=$buttonId?>"><span><?=GetMessage("subscr_form_button")?></span></button>
             </div>
         </div>

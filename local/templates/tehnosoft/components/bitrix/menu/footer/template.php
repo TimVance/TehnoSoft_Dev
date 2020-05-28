@@ -2,7 +2,7 @@
 
 <?if (!empty($arResult)):?>
 
-<div class="row align-items-end" style="height: 90px;">
+<div class="row align-items-end">
     <div class="col"></div>
 
 <?
