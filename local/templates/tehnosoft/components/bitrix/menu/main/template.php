@@ -4,6 +4,7 @@
 <ul class="navbar-nav mr-auto">
 
 <?
+
 $previousLevel = 0;
 foreach($arResult as $arItem):?>
 
@@ -14,10 +15,20 @@ foreach($arResult as $arItem):?>
 <?if ($arItem["IS_PARENT"]):?>
 
 <?if ($arItem["DEPTH_LEVEL"] == 1):?>
-<li class="<? if($arItem["IS_PARENT"]) echo 'parent'; ?> nav-item"><a href="<?=$arItem["LINK"]?>" class="nav-link <?if ($arItem["SELECTED"]):?>root-item-selected<?else:?>root-item<?endif?>"><?=$arItem["TEXT"]?></a>
+<li class="<? if($arItem["IS_PARENT"]) echo 'parent'; ?> nav-item">
+    <?if ($arItem["SELECTED"]):?>
+        <span class="nav-link <?if ($arItem["SELECTED"]):?>selected<?else:?>root-item<?endif?>"><?=$arItem["TEXT"]?></span>
+    <? else: ?>
+        <a href="<?=$arItem["LINK"]?>" class="nav-link <?if ($arItem["SELECTED"]):?>selected<?else:?>root-item<?endif?>"><?=$arItem["TEXT"]?></a>
+    <? endif; ?>
 <ul class="inner-nav">
 <?else:?>
-<li<?if ($arItem["SELECTED"]):?> class="<? if($arItem["IS_PARENT"]) echo 'parent'; ?> nav-item item-selected" <? else: ?> class="nav-item" <?endif?>><a href="<?=$arItem["LINK"]?>" class="nav-link parent"><?=$arItem["TEXT"]?></a>
+<li<?if ($arItem["SELECTED"]):?> class="<? if($arItem["IS_PARENT"]) echo 'parent'; ?> nav-item selected" <? else: ?> class="nav-item" <?endif?>>
+    <?if ($arItem["SELECTED"]):?>
+        <span class="nav-link parent selected"><?=$arItem["TEXT"] ?></span>
+    <? else: ?>
+        <a href="<?=$arItem["LINK"]?>" class=" nav-link parent"><?=$arItem["TEXT"]?></a>
+    <? endif; ?>
 <ul class="inner-nav">
     <?endif?>
 
@@ -26,15 +37,33 @@ foreach($arResult as $arItem):?>
         <?if ($arItem["PERMISSION"] > "D"):?>
 
             <?if ($arItem["DEPTH_LEVEL"] == 1):?>
-                <li class="nav-item"><a href="<?=$arItem["LINK"]?>" class="nav-link <?if ($arItem["SELECTED"]):?>root-item-selected<?else:?>root-item<?endif?>"><?=$arItem["TEXT"]?></a></li>
+                <li class="nav-item">
+                    <?if ($arItem["SELECTED"]):?>
+                        <span class="nav-link <?if ($arItem["SELECTED"]):?>selected<?else:?>root-item<?endif?>"><?=$arItem["TEXT"]?></span>
+                    <? else: ?>
+                        <a href="<?=$arItem["LINK"]?>" class="nav-link <?if ($arItem["SELECTED"]):?>selected<?else:?>root-item<?endif?>"><?=$arItem["TEXT"]?></a>
+                    <? endif; ?>
+                </li>
             <?else:?>
-                <li<?if ($arItem["SELECTED"]):?> class="nav-item item-selected" <? else: ?> class="nav-item" <?endif?>><a class="nav-link" href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a></li>
+                <li<?if ($arItem["SELECTED"]):?> class="nav-item selected" <? else: ?> class="nav-item" <?endif?>>
+                    <?if ($arItem["SELECTED"]):?>
+                        <span class="nav-link selected" href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></span>
+                    <? else: ?>
+                        <a class="nav-link" href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
+                    <? endif; ?>
+                </li>
             <?endif?>
 
         <?else:?>
 
             <?if ($arItem["DEPTH_LEVEL"] == 1):?>
-                <li class="nav-item"><a href="" class="<?if ($arItem["SELECTED"]):?>root-item-selected<?else:?>root-item<?endif?>" title="<?=GetMessage("MENU_ITEM_ACCESS_DENIED")?>"><?=$arItem["TEXT"]?></a></li>
+                <li class="nav-item">
+                    <?if ($arItem["SELECTED"]):?>
+                        <span class="<?if ($arItem["SELECTED"]):?>selected<?else:?>root-item<?endif?>" title="<?=GetMessage("MENU_ITEM_ACCESS_DENIED")?>"><?=$arItem["TEXT"]?></span>
+                    <? else: ?>
+                        <a href="" class="<?if ($arItem["SELECTED"]):?>selected<?else:?>root-item<?endif?>" title="<?=GetMessage("MENU_ITEM_ACCESS_DENIED")?>"><?=$arItem["TEXT"]?></a>
+                    <? endif; ?>
+                </li>
             <?else:?>
                 <li class="nav-item"><a href="" class="denied" title="<?=GetMessage("MENU_ITEM_ACCESS_DENIED")?>"><?=$arItem["TEXT"]?></a></li>
             <?endif?>

@@ -391,7 +391,7 @@
     position: relative;
 }
 
-li.parent.nav-item > a::after {
+li.parent.nav-item > a::after, li.parent.nav-item > span::after {
     content: "";
     width: 8px;
     height: 8px;
