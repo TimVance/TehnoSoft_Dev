@@ -72,7 +72,7 @@
                     "main",
                     array(
                         "ALLOW_MULTI_SELECT"    => "N",
-                        "CHILD_MENU_TYPE"       => "left",
+                        "CHILD_MENU_TYPE"       => "catalog",
                         "DELAY"                 => "N",
                         "MAX_LEVEL"             => "2",
                         "MENU_CACHE_GET_VARS"   => array(""),

@@ -107,6 +107,7 @@ h4 {
 
 .nav-link, .nav-item {
     color: #1D1D1D;
+    list-style-type: none;
 }
 
 .jumdo-head {
